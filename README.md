@@ -1,2 +1,0 @@
-# BackendTTDLogistics
-Backend for TTDLogistics
