@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/TTDLogistics/config/applicationhost.config
+/.vs/TTDLogistics/DesignTimeBuild/.dtbcache.v2
+/.vs/TTDLogistics/FileContentIndex/672e8a74-7396-4715-adc3-81bf00ea1916.vsidx
+/.vs/TTDLogistics/FileContentIndex/a7f5cc34-aeda-4c8a-b176-927feedfc8ff.vsidx
