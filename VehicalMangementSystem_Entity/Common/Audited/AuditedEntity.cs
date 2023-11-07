@@ -14,7 +14,4 @@ public abstract class AuditedEntity
     [Column(name: "ModifiedBy")]
     public int ModifiedBy { get; set; }
 
-    [Column(name: "LockedStatus")]
-    public bool LockedStatus { get; set; }
-
 }

@@ -2,6 +2,6 @@
 
 public interface  ILocation:IBaseRepository<LocationEntity>
 {
-    Task<IEnumerable<LocationEntity>> GetAllLocationsAsync();
-    Task<IEnumerable<LocationEntity>> GetLocationsAsyncById(int locationId);
+    Task<IEnumerable<ResponseLocationDetails>> GetAllLocationsAsync();
+    Task<IEnumerable<ResponseLocationDetails>> GetLocationsAsyncById(int locationId);
 }

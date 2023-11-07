@@ -10,7 +10,7 @@ public class RoleController : ControllerBase
         _role = role;      
     }
     [HttpGet ("GetAllRoleDetails")]
-    public async Task<IEnumerable<RoleEntity>> GetAllRoleDetails()
+    public async Task<IEnumerable<ResponseRoleDeatils>> GetAllRoleDetails()
     {
         try
         {
@@ -22,7 +22,7 @@ public class RoleController : ControllerBase
         }
     }
     [HttpGet("GetRoleByIdAsync")]
-    public async Task<IEnumerable<RoleEntity>> GetRoleByIdAsync(int roleId)
+    public async Task<IEnumerable<ResponseRoleDeatils>> GetRoleByIdAsync(int roleId)
     {
         try
         {

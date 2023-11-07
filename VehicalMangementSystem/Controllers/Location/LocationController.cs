@@ -11,7 +11,7 @@ public class LocationController : ControllerBase
         _location = location;
     }
     [HttpGet("GetAllRoleDetails")]
-    public async Task<IEnumerable<LocationEntity>> GetAllRoleDetails()
+    public async Task<IEnumerable<ResponseLocationDetails>> GetAllRoleDetails()
     {
         try
         {
@@ -23,7 +23,7 @@ public class LocationController : ControllerBase
         }
     }
     [HttpGet("GetLocationsAsyncById")]
-    public async Task<IEnumerable<LocationEntity>> GetLocationsAsyncById(int locationId)
+    public async Task<IEnumerable<ResponseLocationDetails>> GetLocationsAsyncById(int locationId)
     {
         try
         {

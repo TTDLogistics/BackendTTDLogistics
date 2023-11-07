@@ -22,3 +22,4 @@ global using EmployeeMangementSystem.Common.Constants;
 global using Microsoft.EntityFrameworkCore;
 global using EmployeeMangementSystem_Entity.Role;
 global using EmployeeMangementSystem_Entity.Location;
+global using EmployeeMangementSystem_Entity.Employee;

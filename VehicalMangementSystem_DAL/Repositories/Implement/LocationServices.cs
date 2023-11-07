@@ -8,11 +8,17 @@ public class LocationServices:BaseRepository<LocationEntity>,ILocation
         _employeeDbContext = context;
     }
 
-    public async Task<IEnumerable<LocationEntity>> GetAllLocationsAsync()
+    public async Task<IEnumerable<ResponseLocationDetails>> GetAllLocationsAsync()
     {
        try
         {
-            return await _employeeDbContext.Location.Where(x=>x.Status==true).ToListAsync();
+           // return await _employeeDbContext.Location.Where(x=>x.Status==true).ToListAsync();
+           return await _employeeDbContext.Location.Where(x=>x.Status==true).Select(x=> new ResponseLocationDetails
+           { 
+               LocationId = x.LocationId,
+               LocationName = x.LocationName,
+               Status=x.Status
+           }).ToListAsync();  
         }
         catch(Exception )
         {
@@ -20,11 +26,16 @@ public class LocationServices:BaseRepository<LocationEntity>,ILocation
         }
     }
 
-    public async Task<IEnumerable<LocationEntity>> GetLocationsAsyncById(int locationId)
+    public async Task<IEnumerable<ResponseLocationDetails>> GetLocationsAsyncById(int locationId)
     {
        try
         {
-            return await _employeeDbContext.Location.Where(x => x.Status == true && x.LocationId == locationId).ToListAsync();
+            return await _employeeDbContext.Location.Where(x => x.Status == true&&x.LocationId==locationId).Select(x => new ResponseLocationDetails
+            {
+                LocationId = x.LocationId,
+                LocationName = x.LocationName,
+                Status = x.Status
+            }).ToListAsync();
         }
         catch(Exception )
         {
